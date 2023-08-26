@@ -9,6 +9,10 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "css-declaration-sorter": "^7.0.3",
+    "postcss": "^8.4.28",
+    "postcss-sort-media-queries": "^5.2.0",
     "sass": "^1.66.1",
     "vite": "^4.4.5"
   }
