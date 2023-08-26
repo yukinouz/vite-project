@@ -9,10 +9,12 @@ export default defineConfig({
     outDir: resolve(__dirname, "dist"),
     emptyOutDir: false, // npm scriptsで実行
     rollupOptions: {
-      input: ["src/index.html", "src/about/index.html"],
+      input: {
+        index: "src/index.html",
+        about: "src/about/index.html",
+      },
       output: {
         entryFileNames: "assets/js/[name][hash].js",
-        chunkFileNames: "assets/js/[name][hash].js",
         assetFileNames: (assetInfo) => {
           if (/\.( gif|jpeg|jpg|png|svg|webp| )$/.test(assetInfo.name)) {
             return "assets/images/[name][hash].[ext]";
