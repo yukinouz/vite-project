@@ -1,9 +1,5 @@
-import path from "path";
 import { resolve } from "path";
 import { defineConfig } from "vite";
-import pugPlugin from "@macropygia/vite-plugin-pug-static";
-
-const basedir = path.resolve(__dirname, "src");
 
 export default defineConfig({
   root: "src",
@@ -11,14 +7,9 @@ export default defineConfig({
     outDir: resolve(__dirname, "dist"),
     rollupOptions: {
       input: {
-        home: "src/index.pug",
+        home: "src/index.html",
+        about: "src/about/index.html",
       },
     },
   },
-  plugins: [
-    pugPlugin({
-      buildOptions: { basedir },
-      serveOptions: { basedir },
-    }),
-  ],
 });
