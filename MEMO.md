@@ -43,6 +43,7 @@ vite環境構築のキモと思われる
 ## 課題
 
 - `npm run dev`で下層ページが表示されない（TOPと同じものが表示される...）
+- style.scss、main.jsがindex.[ext]に変わってしまう...
 
 ## 参考サイト
 
