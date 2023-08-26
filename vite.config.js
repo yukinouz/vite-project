@@ -5,6 +5,9 @@ import pugPlugin from "vite-plugin-pug";
 export default defineConfig({
   base: "./", // 相対パスでビルドする
   root: "src", // 開発ディレクトリ設定
+  css: {
+    devSourcemap: true,
+  },
   build: {
     outDir: resolve(__dirname, "dist"),
     emptyOutDir: false, // npm scriptsで実行
