@@ -10,10 +10,6 @@
 - [ ] キャッシュクリア
 - [ ] vueのバンドル（hp-staticのみ）
 
-### Optional
-
-- [ ] scss, pugでincludePathを使う
-
 ## やったこと
 
 ### 開発ディレクトリをsrcに
@@ -39,6 +35,10 @@ vite環境構築のキモと思われる
 - css、js、imgはデフォルトだと、index-[hash].css, index-[hash].js, imageName-[hash].[ext]になり。dist/assets配下に入ってしまう。srcの構成の通り入って欲しいので設定が必要となる。
 - jsは`entryFileNames`で行う
 - その他(css, images)は`assetFileNames`で行う
+
+## その他のメモ
+
+- scssでのnode_modulesの読み込みはデフォルトで`node_modules`を省略できる
 
 ## 課題
 
