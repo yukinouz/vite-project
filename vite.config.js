@@ -1,12 +1,13 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
+import pugPlugin from "vite-plugin-pug";
 
 export default defineConfig({
   base: "./", // 相対パスでビルドする
   root: "src", // 開発ディレクトリ設定
   build: {
     outDir: resolve(__dirname, "dist"),
-    emptyOutDir: true,
+    emptyOutDir: false, // npm scriptsで実行
     rollupOptions: {
       input: ["src/index.html", "src/about/index.html"],
       output: {
@@ -24,4 +25,9 @@ export default defineConfig({
       },
     },
   },
+  plugins: [
+    pugPlugin({
+      localImports: true,
+    }),
+  ],
 });
