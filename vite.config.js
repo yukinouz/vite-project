@@ -2,7 +2,8 @@ import { resolve } from "path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  root: "src",
+  base: "./", //相対パスでビルドする
+  root: "src", // 開発ディレクトリ設定
   build: {
     outDir: resolve(__dirname, "dist"),
     rollupOptions: {
