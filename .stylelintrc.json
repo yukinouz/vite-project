@@ -25,12 +25,6 @@
     "font-family-name-quotes": [
       "always-where-recommended",
       { "severity": "warning" }
-    ],
-    "property-no-vendor-prefix": [
-      true,
-      {
-        "ignoreProperties": ["appearance", "text-size-adjust"]
-      }
     ]
   },
   "extends": [
