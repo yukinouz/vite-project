@@ -7,11 +7,14 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint:scss": "stylelint \"**/*.scss\""
+    "lint:scss": "stylelint \"**/*.scss\"",
+    "lint:js": "eslint \"**/*.js\""
   },
   "devDependencies": {
     "autoprefixer": "^10.4.15",
     "css-declaration-sorter": "^7.0.3",
+    "eslint": "^8.48.0",
+    "eslint-plugin-prettier": "^5.0.0",
     "postcss": "^8.4.28",
     "postcss-scss": "^4.0.7",
     "postcss-sort-media-queries": "^5.2.0",
