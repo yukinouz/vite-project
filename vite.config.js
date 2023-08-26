@@ -7,6 +7,11 @@ export default defineConfig({
   root: "src", // 開発ディレクトリ設定
   css: {
     devSourcemap: true,
+    preprocessorOptions: {
+      scss: {
+        includePaths: ["src/scss"],
+      },
+    },
   },
   build: {
     outDir: resolve(__dirname, "dist"),

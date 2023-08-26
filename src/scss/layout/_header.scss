@@ -1,5 +1,11 @@
+@use "global" as global;
+
 .l-header {
   align-items: center;
   display: flex;
   height: 50px;
+
+  @include global.mq-min(md) {
+    height: 100px;
+  }
 }

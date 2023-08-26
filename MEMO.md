@@ -39,6 +39,7 @@ vite環境構築のキモと思われる
 ## その他のメモ
 
 - scssでのnode_modulesの読み込みはデフォルトで`node_modules`を省略できる
+- `npm run dev`した後vite.config.jsを編集した場合、`[vite]server restarted`となって、設定が即座に反映される。（serverを再起動する必要がない。）
 
 ## 課題
 
