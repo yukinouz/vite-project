@@ -36,6 +36,13 @@ vite環境構築のキモと思われる
 - jsは`entryFileNames`で行う
 - その他(css, images)は`assetFileNames`で行う
 
+## 画像圧縮について
+
+- @squoosh/libは明確に開発が止まっている
+  - https://www.npmjs.com/package/@squoosh/lib
+- imageminは最終更新が2年前
+  - https://github.com/vbenjs/vite-plugin-imagemin
+
 ## その他のメモ
 
 - scssでのnode_modulesの読み込みはデフォルトで`node_modules`を省略できる
@@ -45,6 +52,8 @@ vite環境構築のキモと思われる
 
 - `npm run dev`で下層ページが表示されない（TOPと同じものが表示される...）
 - style.scss、main.jsがindex.[ext]に変わってしまう...
+- pugに画像を含んでいる場合、distに画像フォルダが生成されない。
+- 画像圧縮毎回やるけど、srcで画像圧縮してくれないのかな...
 
 ## 参考サイト
 
@@ -57,3 +66,11 @@ vite環境構築のキモと思われる
   - https://whyisthis.dev/others/old-env-to-vite/
 - viteでpugを使う
   - https://designsupply-web.com/media/programming/7652/
+- @squoosh/libでの画像圧縮およびwebp生成
+  - https://ics.media/entry/220204/
+- vsharp
+  - https://github.com/jw-12138/vite-plugin-vsharp
+- vite-plugin-image-optimizer
+  - https://github.com/FatehAK/vite-plugin-image-optimizer
+- vite-plugin-webp-generator
+  - https://github.com/metanas/vite-plugin-webp-generator

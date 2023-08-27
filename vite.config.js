@@ -1,6 +1,7 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
 import pugPlugin from "vite-plugin-pug";
+import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 export default defineConfig({
   base: "./", // 相対パスでビルドする
@@ -25,12 +26,12 @@ export default defineConfig({
         entryFileNames: "assets/js/[name][hash].js",
         assetFileNames: (assetInfo) => {
           if (/\.( gif|jpeg|jpg|png|svg|webp| )$/.test(assetInfo.name)) {
-            return "assets/images/[name][hash].[ext]";
+            return "assets/images/[name][hash][extname]";
           }
           if (/\.css$/.test(assetInfo.name)) {
-            return "assets/css/[name][hash].[ext]";
+            return "assets/css/[name][hash][extname]";
           }
-          return "assets/[name][hash].[ext]";
+          return "assets/[name][hash][extname]";
         },
       },
     },
@@ -38,6 +39,20 @@ export default defineConfig({
   plugins: [
     pugPlugin({
       localImports: true,
+    }),
+    ViteImageOptimizer({
+      png: {
+        quality: 80,
+      },
+      jpeg: {
+        quality: 80,
+      },
+      jpg: {
+        quality: 80,
+      },
+      webp: {
+        lossless: true,
+      },
     }),
   ],
 });
