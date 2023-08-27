@@ -26,12 +26,12 @@ export default defineConfig({
         entryFileNames: "assets/js/[name][hash].js",
         assetFileNames: (assetInfo) => {
           if (/\.( gif|jpeg|jpg|png|svg|webp| )$/.test(assetInfo.name)) {
-            return "assets/images/[name][hash].[ext]";
+            return "assets/images/[name][hash][extname]";
           }
           if (/\.css$/.test(assetInfo.name)) {
-            return "assets/css/[name][hash].[ext]";
+            return "assets/css/[name][hash][extname]";
           }
-          return "assets/[name][hash].[ext]";
+          return "assets/[name][hash][extname]";
         },
       },
     },
