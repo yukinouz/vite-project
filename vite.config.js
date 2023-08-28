@@ -16,7 +16,7 @@ export default defineConfig({
   },
   build: {
     outDir: resolve(__dirname, "dist"),
-    emptyOutDir: false, // npm scriptsで実行
+    emptyOutDir: false,
     rollupOptions: {
       input: {
         index: "src/index.html",
